@@ -1,27 +1,26 @@
 # linkai-aion
 
-**linkai-aion** is a lightweight Python utility library created by [LinkAI](https://linkaiapps.com), built to help developers simplify everyday tasks involving **text processing**, **file I/O**, **CLI parsing**, and more.
+**🚀 LinkAI-Aion v0.1.5 — Smarter AI Utilities, Simplified**
 
-It's designed for developers who want clean, reusable functions to speed up their workflow — and it's just the beginning. Future versions will introduce AI features built on top of this solid foundation.
+✨ **New update, new look — and packed with power!**
+
+AIon is an open-source Python utility library by LinkAI, designed to empower AI projects, automation tools, and productivity workflows. With this new version, we're bringing smarter tools, better performance, and more developer-friendly features than ever.
 
 ---
 
-## ✨ Features
+## ✅ What's New in v0.1.5
 
-- 📝 Text Utilities  
-  `count_words()`, `extract_emails()`, `summarize_text()`, `highlight_keywords()` and more
+- 🌍 **Language Detection**  
+  Now supports basic multi-language keyword recognition for fast and accurate language identification.
 
-- 📂 File Handling  
-  `read_file()`, `write_file()`, `append_file()` — simple and clean
+- 🛡️ **Sensitive Data Scanning**  
+  Detects patterns such as emails, passwords, phone numbers, and API keys — keeping your data safer.
 
-- 🧾 Parser Tools  
-  `extract_numbers()` from messy strings
+- 🧠 **Text Intelligence**  
+  Handy utilities to detect questions, palindromes, emojis, and even visual symbols in your text.
 
-- 🧰 Developer Utils  
-  `slugify()` for SEO-friendly strings, argument parsing for CLI tools
-
-- 🔄 Future-Proof  
-  Built to integrate with LinkAI APIs and models in upcoming versions
+- 🧰 **Expanded Utilities**  
+  Now includes hashers, validators, data formatters, random generators, and many more helpful tools.
 
 ---
 
@@ -29,3 +28,33 @@ It's designed for developers who want clean, reusable functions to speed up thei
 
 ```bash
 pip install linkai-aion
+```
+## 🌐 Website
+
+Learn more, view docs, and explore what's coming next:  
+🔗 https://linkaiapps.com/#linkai-aion
+
+## 📦 PyPI
+
+Install or explore directly via PyPI:  
+🔗 https://pypi.org/project/linkai-aion/
+
+---
+
+## 🔮 Coming Soon in v0.1.6
+
+🎉 **We're not stopping here — check out what's coming next:**
+
+- 🗂️ **Updated files management** with improved upload and organization
+- 🧩 **Enhanced code parser** with better multi-language and syntax error support
+- 🔄 **Real-time file change monitoring** for auto-refresh and instant updates
+- ✂️ **Code snippet extraction** for reuse, sharing, and clean documentation
+- ⚙️ **Extended CLI support** with new power commands
+- 📚 **Full documentation site** with guides, examples, and API references
+
+---
+
+**🚀 AIon helps developers move faster, build smarter, and automate more — all with less code.**  
+From quick utilities to deep integration into AI workflows, v0.1.5 is just the beginning.
+
+**From LinkAI — crafting tools for tomorrow's developers, today.** ❤️
