@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion Code Parser Module
-===============================
+Aqwel-Aion v0.1.7 Code Parser Module
+====================================
 
-Advanced code parsing and language detection utilities for AI projects.
-Provides comprehensive code analysis, language detection, and syntax highlighting.
+Advanced code parsing and language detection utilities for AI research projects.
+Enhanced in v0.1.7 with improved language detection and parsing capabilities.
 
 Features:
-- Multi-language code parsing and analysis
-- Language detection for 30+ programming languages
+- Multi-language code parsing and analysis (30+ languages)
+- Intelligent language detection and classification
 - Syntax highlighting and code formatting
-- Code complexity analysis and metrics
-- Snippet extraction and documentation
+- Code complexity analysis and metrics calculation
+- Snippet extraction and documentation generation
 - Token counting and code summarization
 
 Author: Aksel Aghajanyan
 License: Apache-2.0
-Copyright: 2025 LinkAI
-
-This module is part of the LinkAI-Aion utility library.
+Copyright: 2025 Aqwel AI
 """
 
 # Import the regular expression module for pattern matching

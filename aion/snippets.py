@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion Code Snippets Module
-=================================
+Aqwel-Aion v0.1.7 Code Snippets Module
+======================================
 
-Advanced code snippet extraction and analysis utilities for AI projects.
-Provides comprehensive code parsing, comment extraction, and function analysis.
+Advanced code snippet extraction and analysis utilities for AI research projects.
+Enhanced in v0.1.7 with improved parsing and code structure analysis.
 
 Features:
-- Code comment extraction and analysis
-- Function definition parsing and extraction
-- Class definition parsing and extraction
-- Code structure analysis and documentation
-- Snippet organization and categorization
-- Code element identification and extraction
+- Code comment extraction and intelligent analysis
+- Function definition parsing and signature extraction
+- Class definition parsing and method extraction
+- Code structure analysis and documentation generation
+- Snippet organization and intelligent categorization
+- Code element identification and extraction tools
 
 Author: Aksel Aghajanyan
 License: Apache-2.0
-Copyright: 2025 LinkAI
-
-This module is part of the LinkAI-Aion utility library.
+Copyright: 2025 Aqwel AI
 """
 
 # Import the regular expression module for pattern matching
