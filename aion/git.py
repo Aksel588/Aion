@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion Git Integration Module
-==================================
+Aqwel-Aion v0.1.7 Git Integration Module
+=========================================
 
-Provides Git repository management and analysis capabilities.
-Integrates with existing file management and CLI systems.
+NEW IN v0.1.7: Complete Git repository management and analysis capabilities.
+Professional Git integration for AI research project management.
 
 Features:
-- Repository status and information
-- Commit history and analysis
-- Branch management
-- Diff viewing and comparison
-- Git operations through CLI interface
+- Repository status and comprehensive information
+- Commit history analysis and tracking
+- Branch management and operations
+- Diff viewing and file comparison
+- Git operations through integrated CLI interface
+
+Author: Aksel Aghajanyan
+License: Apache-2.0
+Copyright: 2025 Aqwel AI
 """
 
 import os

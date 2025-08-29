@@ -1,3 +1,24 @@
+#!/usr/bin/env python3
+"""
+Aqwel-Aion v0.1.7 Command Line Interface Module
+===============================================
+
+Professional command-line interface for AI research project management.
+Enhanced in v0.1.7 with Git integration and advanced project operations.
+
+Features:
+- Comprehensive CLI for all Aion library functions
+- Git repository management and operations
+- File and project management commands
+- Interactive help system and documentation
+- Professional command structure and organization
+- Integration with all Aion modules and utilities
+
+Author: Aksel Aghajanyan
+License: Apache-2.0
+Copyright: 2025 Aqwel AI
+"""
+
 import subprocess  # Import subprocess module to run shell commands
 import argparse  # Import argparse for CLI argument parsing
 import sys  # Import sys for system operations

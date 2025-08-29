@@ -1,3 +1,24 @@
+#!/usr/bin/env python3
+"""
+Aqwel-Aion v0.1.7 File Watcher Module
+=====================================
+
+Real-time file monitoring and change detection for AI research projects.
+Enhanced in v0.1.7 with improved monitoring capabilities and event handling.
+
+Features:
+- Real-time file change monitoring and detection
+- Multiple file watching with individual callbacks
+- Thread-safe monitoring operations
+- Configurable polling intervals
+- Event-driven file change notifications
+- Automatic cleanup and resource management
+
+Author: Aksel Aghajanyan
+License: Apache-2.0
+Copyright: 2025 Aqwel AI
+"""
+
 import os
 import time
 import threading

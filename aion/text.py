@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion Text Processing Module
-==================================
+Aqwel-Aion v0.1.7 Text Processing Module
+=========================================
 
-Advanced text processing and analysis utilities for AI projects.
-Provides comprehensive text manipulation, analysis, and intelligence features.
+Advanced text processing and analysis utilities for AI research projects.
+Enhanced in v0.1.7 with improved NLP capabilities and pattern recognition.
 
 Features:
-- Text cleaning and normalization
-- Language detection and analysis
+- Text cleaning, normalization and preprocessing
+- Language detection and linguistic analysis
 - Sentiment analysis and emotion detection
 - Text summarization and key phrase extraction
-- Pattern matching and validation
-- Text transformation utilities
+- Advanced pattern matching and validation
+- Text transformation and formatting utilities
 
 Author: Aksel Aghajanyan
 License: Apache-2.0
-Copyright: 2025 LinkAI
-
-This module is part of the LinkAI-Aion utility library.
+Copyright: 2025 Aqwel AI
 """
 
 # Import the regular expression module for pattern matching

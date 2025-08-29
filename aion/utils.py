@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion Utilities Module
-============================
+Aqwel-Aion v0.1.7 Utilities Module
+===================================
 
-Advanced utility functions and helper tools for AI projects.
-Provides comprehensive utility functions for data formatting, validation, and manipulation.
+Advanced utility functions and helper tools for AI research projects.
+Enhanced in v0.1.7 with additional data processing and validation capabilities.
 
 Features:
 - Data formatting and conversion utilities
-- String manipulation and validation
+- String manipulation and validation functions
 - Random data generation and UUID creation
 - Hash generation and cryptographic functions
 - Number processing and mathematical utilities
@@ -16,9 +16,7 @@ Features:
 
 Author: Aksel Aghajanyan
 License: Apache-2.0
-Copyright: 2025 LinkAI
-
-This module is part of the LinkAI-Aion utility library.
+Copyright: 2025 Aqwel AI
 """
 
 # Import the regular expression module for pattern matching

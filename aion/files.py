@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion File Management Module
-==================================
+Aqwel-Aion v0.1.7 File Management Module
+=========================================
 
-Advanced file management and organization utilities for AI projects.
-Provides comprehensive file operations, organization, and monitoring capabilities.
+Professional file management and organization utilities for AI research projects.
+Enhanced in v0.1.7 with improved error handling and additional operations.
 
 Features:
-- File creation, reading, writing, and deletion
-- File organization and batch operations
-- File monitoring and change detection
-- File validation and integrity checks
-- Directory management and navigation
+- File creation, reading, writing, and deletion operations
+- File organization and batch processing capabilities  
+- File monitoring and change detection systems
+- File validation and integrity checking
+- Directory management and navigation tools
 - File metadata extraction and analysis
 
 Author: Aksel Aghajanyan
 License: Apache-2.0
-Copyright: 2025 LinkAI
-
-This module is part of the LinkAI-Aion utility library.
+Copyright: 2025 Aqwel AI
 """
 
 # Import the os module for operating system interface functions
