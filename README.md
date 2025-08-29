@@ -104,7 +104,7 @@ aion.watcher.watch_file_for_changes("data.csv", on_change_callback)
 ## 🌐 Website & Resources
 
 **Official Website:**  
-🔗 [https://aqwelai.com/#aqwel-aion](https://linkaiapps.com)
+🔗 [https://linkaiapps.com](https://linkaiapps.com)
 
 **Complete Documentation:**  
 📚 Generated automatically with `aion.pdf.generate_complete_documentation()`
