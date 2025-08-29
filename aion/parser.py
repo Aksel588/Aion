@@ -14,7 +14,7 @@ Features:
 - Snippet extraction and documentation
 - Token counting and code summarization
 
-Author: Aksel (CEO, LinkAI)
+Author: Aksel Aghajanyan
 License: Apache-2.0
 Copyright: 2025 LinkAI
 

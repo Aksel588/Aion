@@ -14,7 +14,7 @@ Features:
 - Number processing and mathematical utilities
 - Data validation and sanitization tools
 
-Author: Aksel (CEO, LinkAI)
+Author: Aksel Aghajanyan
 License: Apache-2.0
 Copyright: 2025 LinkAI
 

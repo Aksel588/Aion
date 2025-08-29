@@ -1,0 +1,65 @@
+AION AI/ML LIBRARY - USER GUIDE
+===================================
+
+Generated: 2025-08-29 18:09:17
+Author: LinkAI Team
+
+INTRODUCTION
+------------
+
+Welcome to the Aion AI/ML Library! This comprehensive toolkit provides everything 
+you need for AI research, machine learning development, and data science projects. 
+With over 175 functions across 12 modules, Aion offers a complete solution for 
+modern AI development.
+
+INSTALLATION
+------------
+pip install linkai-aion
+
+For full AI/ML capabilities:
+pip install linkai-aion[ai]
+
+QUICK START EXAMPLES
+-------------------
+
+1. MATHEMATICS AND STATISTICS:
+   import aion.maths as math
+   result = math.addition([1, 2, 3], [4, 5, 6])  # [5, 7, 9]
+   mean_val = math.mean([1, 2, 3, 4, 5])  # 3.0
+   
+2. TEXT PROCESSING:
+   import aion.text as text
+   word_count = text.count_words("Hello world")  # 2
+   clean_text = text.clean_text("  Hello!  ")  # "Hello!"
+
+3. FILE MANAGEMENT:
+   import aion.files as files
+   exists = files.file_exists("data.txt")
+   files.copy_file("source.txt", "backup.txt")
+
+4. CODE ANALYSIS:
+   import aion.code as code
+   explanation = code.explain_code("def hello(): pass")
+   complexity = code.analyze_complexity(code_string)
+
+5. EMBEDDINGS:
+   import aion.embed as embed
+   embedding = embed.embed_text("Machine learning")
+   similarity = embed.cosine_similarity(vec1, vec2)
+
+6. MODEL EVALUATION:
+   import aion.evaluate as evaluate
+   metrics = evaluate.calculate_classification_metrics(y_pred, y_true)
+
+ADVANCED FEATURES
+----------------
+• Linear algebra operations (matrices, eigenvalues, SVD)
+• Machine learning utilities (activations, losses, metrics)
+• Signal processing (FFT, convolution)
+• Prompt engineering templates
+• Code quality analysis
+• Statistical computing
+• Data preprocessing pipelines
+
+For complete API documentation, see aion_api_documentation.pdf
+        

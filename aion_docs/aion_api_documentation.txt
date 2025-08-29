@@ -1,0 +1,2529 @@
+AION AI/ML LIBRARY - COMPREHENSIVE DOCUMENTATION
+============================================================
+
+Generated: 2025-08-29 17:50:13
+Author: LinkAI Team
+
+TABLE OF CONTENTS
+--------------------
+
+TEXT: 16 functions
+FILES: 13 functions
+PARSER: 24 functions
+UTILS: 9 functions
+MATHS: 71 functions
+CODE: 9 functions
+SNIPPETS: 3 functions
+PROMPT: 7 functions
+EMBED: 3 functions
+EVALUATE: 6 functions
+GIT: 3 functions
+WATCHER: 8 functions
+
+TOTAL: 172 functions across 12 modules
+
+============================================================
+
+TEXT MODULE
+===========
+
+DESCRIPTION:
+------------
+LinkAI-Aion Text Processing Module
+==================================
+
+Advanced text processing and analysis utilities for AI projects.
+Provides comprehensive text manipulation, analysis, and intelligence features.
+
+Features:
+- Text cleaning and normalization
+- Language detection and analysis
+- Sentiment analysis and emotion detection
+- Text summarization and key phrase extraction
+- Pattern matching and validation
+- Text transformation utilities
+
+Author: Aksel (CEO, LinkAI)
+License: Apache-2.0
+Copyright: 2025 LinkAI
+
+This module is part of the LinkAI-Aion utility library.
+
+FUNCTIONS:
+----------
+
+• clean_text(text)
+  Clean the given text by removing extra whitespace and normalizing formatting.
+
+Args:
+    text (str): The input text to clean
+    
+Returns:
+    str: The cleaned text
+
+• count_characters(text)
+  Count the number of characters in the given text.
+
+Args:
+    text (str): The input text to analyze
+    
+Returns:
+    int: The number of characters in the text
+
+• count_lines(text)
+  Count the number of lines in the given text.
+
+Args:
+    text (str): The input text to analyze
+    
+Returns:
+    int: The number of lines in the text
+
+• count_words(text)
+  Count the number of words in the given text.
+
+Args:
+    text (str): The input text to analyze
+    
+Returns:
+    int: The number of words in the text
+
+• detect_language(text)
+  Perform basic language detection based on common words and patterns.
+
+Args:
+    text (str): The input text to analyze
+    
+Returns:
+    str: The detected language code or 'unknown'
+
+• extract_emails(text)
+  Extract email addresses from the given text using regex pattern matching.
+
+Args:
+    text (str): The input text to search for email addresses
+    
+Returns:
+    List[str]: A list of found email addresses
+
+• extract_keywords(text, max_keywords=10)
+  Extract keywords from the given text based on word frequency.
+
+Args:
+    text (str): The input text to analyze
+    max_keywords (int): Maximum number of keywords to return
+    
+Returns:
+    List[str]: A list of extracted keywords
+
+• extract_phone_numbers(text)
+  Extract phone numbers from the given text using regex pattern matching.
+
+Args:
+    text (str): The input text to search for phone numbers
+    
+Returns:
+    List[str]: A list of found phone numbers
+
+• extract_urls(text)
+  Extract URLs from the given text using regex pattern matching.
+
+Args:
+    text (str): The input text to search for URLs
+    
+Returns:
+    List[str]: A list of found URLs
+
+• generate_hash(text, algorithm='md5')
+  Generate a hash of the given text using the specified algorithm.
+
+Args:
+    text (str): The input text to hash
+    algorithm (str): The hashing algorithm to use ('md5', 'sha1', 'sha256')
+    
+Returns:
+    str: The hexadecimal hash of the text
+
+• is_palindrome(text)
+  Check if the given text is a palindrome (reads the same forwards and backwards).
+
+Args:
+    text (str): The input text to check
+    
+Returns:
+    bool: True if the text is a palindrome, False otherwise
+
+• is_question(text)
+  Check if the given text is a question by looking for question mark at the end.
+
+This function performs a simple check to determine if the text
+ends with a question mark, indicating it's a question.
+
+Args:
+    text (str): The text to check for question format
+    
+Returns:
+    bool: True if the text is a question, False otherwise
+
+• is_sensitive_text(text)
+  Check if the given text contains sensitive information patterns.
+
+This function scans text for common patterns that indicate sensitive
+data such as SSNs, phone numbers, emails, passwords, and API keys.
+
+Args:
+    text (str): The text to scan for sensitive information
+    
+Returns:
+    bool: True if sensitive patterns are found, False otherwise
+
+• normalize_whitespace(text)
+  Normalize whitespace in the given text by removing extra spaces and trimming.
+
+This function removes multiple consecutive whitespace characters
+and trims leading/trailing whitespace for consistent formatting.
+
+Args:
+    text (str): The text to normalize whitespace in
+    
+Returns:
+    str: The text with normalized whitespace
+
+• reverse_text(text)
+  Reverse the given text string.
+
+Args:
+    text (str): The input text to reverse
+    
+Returns:
+    str: The reversed text
+
+• text_contains_visual_language(text)
+  Check if the given text contains visual language keywords.
+
+This function identifies text that describes visual elements,
+which is useful for AI image prompts or creative writing analysis.
+
+Args:
+    text (str): The text to analyze for visual language
+    
+Returns:
+    bool: True if visual keywords are found, False otherwise
+
+------------------------------------------------------------
+
+FILES MODULE
+============
+
+DESCRIPTION:
+------------
+LinkAI-Aion File Management Module
+==================================
+
+Advanced file management and organization utilities for AI projects.
+Provides comprehensive file operations, organization, and monitoring capabilities.
+
+Features:
+- File creation, reading, writing, and deletion
+- File organization and batch operations
+- File monitoring and change detection
+- File validation and integrity checks
+- Directory management and navigation
+- File metadata extraction and analysis
+
+Author: Aksel (CEO, LinkAI)
+License: Apache-2.0
+Copyright: 2025 LinkAI
+
+This module is part of the LinkAI-Aion utility library.
+
+FUNCTIONS:
+----------
+
+• append_to_file(filepath: str, content: str) -> bool
+  Append content to an existing file at the specified path.
+
+Args:
+    filepath (str): The path of the file to append to
+    content (str): The content to append to the file
+    
+Returns:
+    bool: True if content was appended successfully, False otherwise
+
+• batch_rename_files(directory: str, prefix: str = '', suffix: str = '', start_number: int = 1) -> bool
+  Rename all files in a directory with a consistent naming pattern.
+
+Args:
+    directory (str): The directory containing files to rename
+    prefix (str): Prefix to add to all filenames
+    suffix (str): Suffix to add to all filenames
+    start_number (int): Starting number for sequential naming
+    
+Returns:
+    bool: True if batch rename was successful, False otherwise
+
+• copy_file(source_path: str, destination_path: str) -> bool
+  Copy a file from source_path to destination_path.
+
+Args:
+    source_path (str): The path of the source file
+    destination_path (str): The path where the file should be copied
+    
+Returns:
+    bool: True if file was copied successfully, False otherwise
+
+• create_directory(directory_path: str) -> bool
+  Create a directory at the specified path.
+
+Args:
+    directory_path (str): The path where the directory should be created
+    
+Returns:
+    bool: True if directory was created successfully, False otherwise
+
+• create_empty_file(filepath: str) -> bool
+  Create an empty file at the specified path.
+
+Args:
+    filepath (str): The path where the file should be created
+    
+Returns:
+    bool: True if file was created successfully, False otherwise
+
+• delete_file(filepath: str) -> bool
+  Delete a file at the specified path.
+
+Args:
+    filepath (str): The path of the file to delete
+    
+Returns:
+    bool: True if file was deleted successfully, False otherwise
+
+• file_exists(filepath: str) -> bool
+  Check if a file exists at the specified path.
+
+Args:
+    filepath (str): The path to check for file existence
+    
+Returns:
+    bool: True if file exists, False otherwise
+
+• get_file_info(filepath: str) -> Optional[Dict[str, Any]]
+  Get detailed information about a file.
+
+Args:
+    filepath (str): The path of the file to get information about
+    
+Returns:
+    Optional[Dict[str, Any]]: File information dictionary or None if error
+
+• list_files(directory: str, pattern: str = '*') -> List[str]
+  List all files in a directory matching the specified pattern.
+
+Args:
+    directory (str): The directory to list files from
+    pattern (str): The file pattern to match (default: "*" for all files)
+    
+Returns:
+    List[str]: List of file paths matching the pattern
+
+• organize_files(source_dir: str, target_dir: str, file_types: Dict[str, List[str]]) -> bool
+  Organize files by moving them to appropriate directories based on file types.
+
+Args:
+    source_dir (str): The source directory containing files to organize
+    target_dir (str): The target directory where organized files will be placed
+    file_types (Dict[str, List[str]]): Dictionary mapping category names to file extensions
+    
+Returns:
+    bool: True if organization was successful, False otherwise
+
+• read_file(filepath: str) -> Optional[str]
+  Read content from a file at the specified path.
+
+Args:
+    filepath (str): The path of the file to read
+    
+Returns:
+    Optional[str]: The file content if successful, None otherwise
+
+• rename_file(old_path: str, new_path: str) -> bool
+  Rename a file from old_path to new_path.
+
+Args:
+    old_path (str): The current path of the file
+    new_path (str): The new path for the file
+    
+Returns:
+    bool: True if file was renamed successfully, False otherwise
+
+• write_file(filepath: str, content: str) -> bool
+  Write content to a file at the specified path.
+
+Args:
+    filepath (str): The path where the file should be written
+    content (str): The content to write to the file
+    
+Returns:
+    bool: True if file was written successfully, False otherwise
+
+------------------------------------------------------------
+
+PARSER MODULE
+=============
+
+DESCRIPTION:
+------------
+LinkAI-Aion Code Parser Module
+===============================
+
+Advanced code parsing and language detection utilities for AI projects.
+Provides comprehensive code analysis, language detection, and syntax highlighting.
+
+Features:
+- Multi-language code parsing and analysis
+- Language detection for 30+ programming languages
+- Syntax highlighting and code formatting
+- Code complexity analysis and metrics
+- Snippet extraction and documentation
+- Token counting and code summarization
+
+Author: Aksel (CEO, LinkAI)
+License: Apache-2.0
+Copyright: 2025 LinkAI
+
+This module is part of the LinkAI-Aion utility library.
+
+FUNCTIONS:
+----------
+
+• count_tokens(code: str) -> int
+  Count tokens in code (rough estimation).
+
+This function provides a rough estimation of the number
+of tokens in the code by splitting on whitespace.
+
+Args:
+    code (str): The source code to count tokens in
+    
+Returns:
+    int: The estimated number of tokens
+
+• detect_language(code: str) -> str
+  Enhanced language detection for all major programming languages.
+
+This function analyzes code content to determine the programming language
+based on keywords, syntax patterns, and language-specific constructs.
+
+Args:
+    code (str): The source code to analyze for language detection
+    
+Returns:
+    str: The detected programming language identifier
+
+• extract_snippets(code: str) -> Dict[str, str]
+  Extract code snippets marked with @snippet tags.
+
+This function searches for code snippets marked with special
+comment tags and extracts them for reuse or documentation.
+
+Args:
+    code (str): The source code containing snippet markers
+    
+Returns:
+    Dict[str, str]: Dictionary mapping snippet names to their content
+
+• highlight_html(code: str) -> str
+  Basic HTML syntax highlighting.
+
+This function highlights HTML tags by wrapping them
+in markdown-style bold markers.
+
+Args:
+    code (str): The HTML source code to highlight
+    
+Returns:
+    str: The highlighted HTML code
+
+• highlight_javascript(code: str) -> str
+  Basic JavaScript syntax highlighting.
+
+This function highlights JavaScript keywords by wrapping them
+in markdown-style bold markers.
+
+Args:
+    code (str): The JavaScript source code to highlight
+    
+Returns:
+    str: The highlighted JavaScript code
+
+• highlight_python(code: str) -> str
+  Basic Python syntax highlighting.
+
+This function highlights Python keywords by wrapping them
+in markdown-style bold markers.
+
+Args:
+    code (str): The Python source code to highlight
+    
+Returns:
+    str: The highlighted Python code
+
+• highlight_syntax(code: str, language: str) -> str
+  Basic syntax highlighting for different languages.
+
+This function provides basic syntax highlighting by wrapping
+keywords in markdown-style bold markers.
+
+Args:
+    code (str): The source code to highlight
+    language (str): The programming language for highlighting
+    
+Returns:
+    str: The highlighted code
+
+• parse_code(code: str, language: str) -> Dict[str, Any]
+  Enhanced code parsing with language-specific analysis.
+
+This function performs detailed analysis of source code based on the
+detected programming language, extracting functions, classes, imports,
+and other code elements.
+
+Args:
+    code (str): The source code to parse and analyze
+    language (str): The programming language identifier
+    
+Returns:
+    Dict[str, Any]: Dictionary containing parsed code information
+
+• parse_cpp_code(code: str) -> Dict[str, Any]
+  Parse C++ code using regex pattern matching.
+
+This function uses regular expressions to extract functions, classes,
+and includes from C++ code.
+
+Args:
+    code (str): The C++ source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing C++-specific parsing results
+
+• parse_csharp_code(code: str) -> Dict[str, Any]
+  Parse C# code using regex pattern matching.
+
+This function uses regular expressions to extract methods, classes,
+and using statements from C# code.
+
+Args:
+    code (str): The C# source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing C#-specific parsing results
+
+• parse_css_code(code: str) -> Dict[str, Any]
+  Parse CSS code using regex pattern matching.
+
+This function uses regular expressions to extract selectors
+and properties from CSS code.
+
+Args:
+    code (str): The CSS source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing CSS-specific parsing results
+
+• parse_generic_code(code: str) -> Dict[str, Any]
+  Parse generic code for unknown languages.
+
+This function provides basic analysis for code in unknown
+programming languages.
+
+Args:
+    code (str): The source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing generic parsing results
+
+• parse_go_code(code: str) -> Dict[str, Any]
+  Parse Go code using regex pattern matching.
+
+This function uses regular expressions to extract functions, packages,
+and imports from Go code.
+
+Args:
+    code (str): The Go source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Go-specific parsing results
+
+• parse_html_code(code: str) -> Dict[str, Any]
+  Parse HTML code using regex pattern matching.
+
+This function uses regular expressions to extract tags, divs,
+and forms from HTML code.
+
+Args:
+    code (str): The HTML source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing HTML-specific parsing results
+
+• parse_java_code(code: str) -> Dict[str, Any]
+  Parse Java code using regex pattern matching.
+
+This function uses regular expressions to extract methods, classes,
+and imports from Java code.
+
+Args:
+    code (str): The Java source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Java-specific parsing results
+
+• parse_javascript_code(code: str) -> Dict[str, Any]
+  Parse JavaScript code using regex pattern matching.
+
+This function uses regular expressions to extract functions, classes,
+and imports from JavaScript code.
+
+Args:
+    code (str): The JavaScript source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing JavaScript-specific parsing results
+
+• parse_kotlin_code(code: str) -> Dict[str, Any]
+  Parse Kotlin code using regex pattern matching.
+
+This function uses regular expressions to extract functions, classes,
+and imports from Kotlin code.
+
+Args:
+    code (str): The Kotlin source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Kotlin-specific parsing results
+
+• parse_php_code(code: str) -> Dict[str, Any]
+  Parse PHP code using regex pattern matching.
+
+This function uses regular expressions to extract functions, classes,
+and includes from PHP code.
+
+Args:
+    code (str): The PHP source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing PHP-specific parsing results
+
+• parse_python_code(code: str) -> Dict[str, Any]
+  Parse Python code with detailed analysis using AST.
+
+This function uses Python's Abstract Syntax Tree (AST) to perform
+detailed analysis of Python code, extracting functions, classes,
+imports, and other code elements.
+
+Args:
+    code (str): The Python source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Python-specific parsing results
+
+• parse_ruby_code(code: str) -> Dict[str, Any]
+  Parse Ruby code using regex pattern matching.
+
+This function uses regular expressions to extract methods, classes,
+and requires from Ruby code.
+
+Args:
+    code (str): The Ruby source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Ruby-specific parsing results
+
+• parse_rust_code(code: str) -> Dict[str, Any]
+  Parse Rust code using regex pattern matching.
+
+This function uses regular expressions to extract functions, structs,
+and use statements from Rust code.
+
+Args:
+    code (str): The Rust source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Rust-specific parsing results
+
+• parse_sql_code(code: str) -> Dict[str, Any]
+  Parse SQL code using regex pattern matching.
+
+This function uses regular expressions to extract tables, queries,
+and operations from SQL code.
+
+Args:
+    code (str): The SQL source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing SQL-specific parsing results
+
+• parse_swift_code(code: str) -> Dict[str, Any]
+  Parse Swift code using regex pattern matching.
+
+This function uses regular expressions to extract functions, classes,
+and imports from Swift code.
+
+Args:
+    code (str): The Swift source code to parse
+    
+Returns:
+    Dict[str, Any]: Dictionary containing Swift-specific parsing results
+
+• summarize_code(code: str) -> str
+  Generate a simple summary of the code.
+
+This function provides a basic summary of the code including
+line count, character count, function count, and class count.
+
+Args:
+    code (str): The source code to summarize
+    
+Returns:
+    str: A summary string describing the code
+
+------------------------------------------------------------
+
+UTILS MODULE
+============
+
+DESCRIPTION:
+------------
+LinkAI-Aion Utilities Module
+============================
+
+Advanced utility functions and helper tools for AI projects.
+Provides comprehensive utility functions for data formatting, validation, and manipulation.
+
+Features:
+- Data formatting and conversion utilities
+- String manipulation and validation
+- Random data generation and UUID creation
+- Hash generation and cryptographic functions
+- Number processing and mathematical utilities
+- Data validation and sanitization tools
+
+Author: Aksel (CEO, LinkAI)
+License: Apache-2.0
+Copyright: 2025 LinkAI
+
+This module is part of the LinkAI-Aion utility library.
+
+FUNCTIONS:
+----------
+
+• format_bytes(size)
+  Format a byte size into a human-readable string with appropriate units.
+
+This function converts bytes into KB, MB, GB, etc. with proper
+formatting and rounding to 2 decimal places.
+
+Args:
+    size (int): The size in bytes to format
+    
+Returns:
+    str: A formatted string with the size and appropriate unit
+
+• format_duration(seconds)
+  Format a duration in seconds into a human-readable string.
+
+This function converts seconds into minutes and seconds format
+for better readability.
+
+Args:
+    seconds (int): The duration in seconds to format
+    
+Returns:
+    str: A formatted string showing minutes and seconds
+
+• generate_uuid()
+  Generate a new UUID (Universally Unique Identifier).
+
+This function creates a new UUID4 which is cryptographically
+random and suitable for unique identifiers.
+
+Args:
+    None
+    
+Returns:
+    str: A new UUID string
+
+• get_even_numbers(numbers)
+  Filter a list of numbers to return only even numbers.
+
+This function uses list comprehension to filter out odd numbers
+and return only the even numbers from the input list.
+
+Args:
+    numbers (List[int]): The list of numbers to filter
+    
+Returns:
+    List[int]: A list containing only the even numbers
+
+• get_odd_numbers(numbers)
+  Filter a list of numbers to return only odd numbers.
+
+This function uses list comprehension to filter out even numbers
+and return only the odd numbers from the input list.
+
+Args:
+    numbers (List[int]): The list of numbers to filter
+    
+Returns:
+    List[int]: A list containing only the odd numbers
+
+• is_valid_email(email)
+  Validate if the given string is a properly formatted email address.
+
+This function uses regex pattern matching to check if the email
+follows the basic email format (local@domain).
+
+Args:
+    email (str): The email address to validate
+    
+Returns:
+    bool: True if the email is valid, False otherwise
+
+• md5_hash(text)
+  Generate an MD5 hash of the given text.
+
+This function creates an MD5 hash of the input text, which can be
+used for data integrity checks or as a simple fingerprint.
+
+Args:
+    text (str): The text to hash
+    
+Returns:
+    str: The hexadecimal MD5 hash of the text
+
+• random_string(length=8)
+  Generate a random string of specified length using letters and digits.
+
+This function creates a cryptographically secure random string
+that can be used for temporary identifiers or tokens.
+
+Args:
+    length (int): The length of the random string to generate (default: 8)
+    
+Returns:
+    str: A random string of the specified length
+
+• slugify(text)
+  Convert text into a URL-friendly slug format.
+
+This function converts text to lowercase, removes extra whitespace,
+and replaces spaces with hyphens for use in URLs or filenames.
+
+Args:
+    text (str): The text to convert to slug format
+    
+Returns:
+    str: A URL-friendly slug version of the text
+
+------------------------------------------------------------
+
+MATHS MODULE
+============
+
+DESCRIPTION:
+------------
+Mathematics and Statistics Library for Aion
+
+This comprehensive mathematics library provides functions organized from easy to expert level:
+- Basic arithmetic operations with support for scalars, lists, and strings
+- Random sampling and probability functions  
+- Linear algebra operations (vectors, matrices)
+- Statistical analysis functions
+- Machine learning utilities (activation functions, loss functions)
+- Distance and similarity metrics
+- Advanced matrix transformations
+- Fourier analysis and signal processing
+
+Author: Aion Team
+License: MIT
+Version: 1.0.0
+
+FUNCTIONS:
+----------
+
+• abs_value(x: Union[int, float]) -> Union[int, float]
+  Calculate the absolute value of a number.
+
+Args:
+    x: Input number
+    
+Returns:
+    Absolute value of x
+    
+Examples:
+    >>> abs_value(-5)
+    5
+    >>> abs_value(3.14)
+    3.14
+
+• acos(x: Union[int, float]) -> float
+  Calculate the arccosine of x.
+
+Args:
+    x: Input value (must be between -1 and 1)
+    
+Returns:
+    Arccosine of x in radians
+    
+Raises:
+    ValueError: If x is not in [-1, 1]
+    
+Examples:
+    >>> acos(1)
+    0.0
+    >>> acos(0)
+    1.5707963267948966
+
+• addition(a: Union[int, float, List[Union[int, float]], str], b: Union[int, float, List[Union[int, float]], str]) -> Union[int, float, List[Union[int, float]]]
+  Perform addition between two values with support for scalars, lists, and numeric strings.
+
+This function handles multiple input types:
+- Numbers: Direct addition
+- Lists: Element-wise addition with padding
+- Strings: Comma-separated numeric strings converted to lists
+- Mixed types: Scalar-vector operations
+
+Args:
+    a: First operand (number, list of numbers, or comma-separated numeric string)
+    b: Second operand (number, list of numbers, or comma-separated numeric string)
+
+Returns:
+    Result of addition operation
+    
+Raises:
+    ValueError: If string cannot be converted to numbers
+    TypeError: If inputs are of unsupported types
+    
+Examples:
+    >>> addition(5, 10)
+    15
+    >>> addition("1,2,3", "4,5,6")
+    [5.0, 7.0, 9.0]
+    >>> addition([1, 2, 3], 5)
+    [6, 7, 8]
+    >>> addition(5, [10, 20])
+    [15, 25]
+    >>> addition([1, 2], [3, 4, 5])  # Shorter list padded with zeros
+    [4, 6, 5]
+
+• asin(x: Union[int, float]) -> float
+  Calculate the arcsine of x.
+
+Args:
+    x: Input value (must be between -1 and 1)
+    
+Returns:
+    Arcsine of x in radians
+    
+Raises:
+    ValueError: If x is not in [-1, 1]
+    
+Examples:
+    >>> asin(0)
+    0.0
+    >>> asin(1)
+    1.5707963267948966
+
+• atan(x: Union[int, float]) -> float
+  Calculate the arctangent of x.
+
+Args:
+    x: Input value
+    
+Returns:
+    Arctangent of x in radians
+    
+Examples:
+    >>> atan(0)
+    0.0
+    >>> atan(1)
+    0.7853981633974483
+
+• binomial_pmf(k: int, n: int, p: float) -> float
+  Calculate the probability mass function of a binomial distribution.
+
+Args:
+    k: Number of successes
+    n: Number of trials
+    p: Probability of success
+    
+Returns:
+    PMF value
+    
+Examples:
+    >>> binomial_pmf(2, 5, 0.3)
+    0.3087
+
+• clamp(value: Union[int, float], min_val: Union[int, float], max_val: Union[int, float]) -> Union[int, float]
+  Clamp a value between minimum and maximum bounds.
+
+Args:
+    value: Input value
+    min_val: Minimum bound
+    max_val: Maximum bound
+    
+Returns:
+    Clamped value
+    
+Examples:
+    >>> clamp(5, 0, 10)
+    5
+    >>> clamp(-1, 0, 10)
+    0
+    >>> clamp(15, 0, 10)
+    10
+
+• convolution(signal: Sequence[Union[int, float]], kernel: Sequence[Union[int, float]]) -> List[float]
+  Compute 1D convolution of signal with kernel.
+
+Args:
+    signal: Input signal
+    kernel: Convolution kernel
+    
+Returns:
+    Convolved signal
+    
+Examples:
+    >>> convolution([1, 2, 3], [1, 0, -1])
+    [1.0, 2.0, 2.0, 0.0, -3.0]
+
+• correlation(x: Sequence[Union[int, float]], y: Sequence[Union[int, float]]) -> float
+  Calculate Pearson correlation coefficient between two variables.
+
+Args:
+    x: First variable
+    y: Second variable
+    
+Returns:
+    Correlation coefficient (-1 to 1)
+    
+Examples:
+    >>> correlation([1, 2, 3, 4], [2, 4, 6, 8])
+    1.0
+    >>> correlation([1, 2, 3], [3, 2, 1])
+    -1.0
+
+• cos(x: Union[int, float]) -> float
+  Calculate the cosine of x (in radians).
+
+Args:
+    x: Angle in radians
+    
+Returns:
+    Cosine of x
+    
+Examples:
+    >>> cos(0)
+    1.0
+    >>> cos(math.pi)
+    -1.0
+
+• cosine_similarity(a: Sequence[Union[int, float]], b: Sequence[Union[int, float]]) -> float
+  Calculate cosine similarity between two vectors.
+
+Args:
+    a: First vector
+    b: Second vector
+    
+Returns:
+    Cosine similarity (-1 to 1)
+    
+Examples:
+    >>> cosine_similarity([1, 0], [0, 1])
+    0.0
+    >>> cosine_similarity([1, 1], [1, 1])
+    1.0
+
+• covariance(x: Sequence[Union[int, float]], y: Sequence[Union[int, float]]) -> float
+  Calculate covariance between two variables.
+
+Args:
+    x: First variable
+    y: Second variable
+    
+Returns:
+    Covariance value
+    
+Examples:
+    >>> covariance([1, 2, 3], [2, 4, 6])
+    2.0
+
+• cross_entropy_loss(y_true: Sequence[Union[int, float]], y_pred: Sequence[Union[int, float]]) -> float
+  Calculate cross-entropy loss for binary classification.
+
+Args:
+    y_true: True binary labels (0 or 1)
+    y_pred: Predicted probabilities
+    
+Returns:
+    Cross-entropy loss
+    
+Examples:
+    >>> cross_entropy_loss([1, 0, 1], [0.9, 0.1, 0.8])
+    0.1053605156578263
+
+• cross_product(a: Sequence[Union[int, float]], b: Sequence[Union[int, float]]) -> List[float]
+  Calculate the cross product of two 3D vectors.
+
+Args:
+    a: First 3D vector
+    b: Second 3D vector
+    
+Returns:
+    Cross product vector
+    
+Raises:
+    ValueError: If vectors are not 3D
+    
+Examples:
+    >>> cross_product([1, 0, 0], [0, 1, 0])
+    [0.0, 0.0, 1.0]
+    >>> cross_product([1, 2, 3], [4, 5, 6])
+    [-3.0, 6.0, -3.0]
+
+• degrees(x: Union[int, float]) -> float
+  Convert angle from radians to degrees.
+
+Args:
+    x: Angle in radians
+    
+Returns:
+    Angle in degrees
+    
+Examples:
+    >>> degrees(math.pi)
+    180.0
+    >>> degrees(math.pi / 2)
+    90.0
+
+• determinant(matrix: Sequence[Sequence[Union[int, float]]]) -> float
+  Calculate the determinant of a square matrix.
+
+Args:
+    matrix: Square matrix as a sequence of sequences
+    
+Returns:
+    Determinant of the matrix
+    
+Raises:
+    ValueError: If matrix is not square
+    
+Examples:
+    >>> determinant([[1, 2], [3, 4]])
+    -2.0
+    >>> determinant([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+    1.0
+
+• division(a: Union[int, float, List[Union[int, float]], str], b: Union[int, float, List[Union[int, float]], str]) -> Union[float, NoneType, List[Optional[float]]]
+  Perform division between two values with support for scalars, lists, and numeric strings.
+Handles division by zero gracefully by returning None.
+
+Args:
+    a: First operand (dividend)
+    b: Second operand (divisor)
+
+Returns:
+    Result of division operation (None for division by zero)
+    
+Examples:
+    >>> division(10, 2)
+    5.0
+    >>> division(10, 0)
+    None
+    >>> division([10, 20], 2)
+    [5.0, 10.0]
+    >>> division(10, [2, 0, 5])
+    [5.0, None, 2.0]
+    >>> division([10, 20], [2, 0])
+    [5.0, None]
+    >>> division("10,20", "2,5")
+    [5.0, 4.0]
+
+• dot_product(a: Sequence[Union[int, float]], b: Sequence[Union[int, float]]) -> float
+  Calculate the dot product (scalar product) of two vectors.
+
+The dot product is the sum of the products of corresponding elements.
+
+Args:
+    a: First vector
+    b: Second vector
+    
+Returns:
+    Dot product as a scalar value
+    
+Raises:
+    ValueError: If vectors have different lengths
+    
+Examples:
+    >>> dot_product([1, 2, 3], [4, 5, 6])
+    32  # 1*4 + 2*5 + 3*6 = 4 + 10 + 18 = 32
+    >>> dot_product([1, 0], [0, 1])
+    0  # Orthogonal vectors
+
+• eigenvalues(matrix: Sequence[Sequence[Union[int, float]]]) -> List[complex]
+  Calculate the eigenvalues of a square matrix.
+
+Args:
+    matrix: Square matrix as a sequence of sequences
+    
+Returns:
+    List of eigenvalues (may be complex)
+    
+Raises:
+    ValueError: If matrix is not square
+    
+Examples:
+    >>> eigenvalues([[1, 2], [3, 4]])
+    [(-0.37228132326901431+0j), (5.3722813232690143+0j)]
+
+• euclidean_distance(a: Sequence[Union[int, float]], b: Sequence[Union[int, float]]) -> float
+  Calculate Euclidean distance between two vectors.
+
+Args:
+    a: First vector
+    b: Second vector
+    
+Returns:
+    Euclidean distance
+    
+Raises:
+    ValueError: If vectors have different lengths
+    
+Examples:
+    >>> euclidean_distance([0, 0], [3, 4])
+    5.0
+    >>> euclidean_distance([1, 2, 3], [4, 5, 6])
+    5.196152422706632
+
+• exp(x: Union[int, float]) -> float
+  Calculate e raised to the power of x.
+
+Args:
+    x: Exponent
+    
+Returns:
+    e^x
+    
+Examples:
+    >>> exp(0)
+    1.0
+    >>> exp(1)
+    2.718281828459045
+
+• factorial(n: int) -> int
+  Calculate the factorial of a non-negative integer.
+
+Args:
+    n: Non-negative integer
+    
+Returns:
+    n! (factorial of n)
+    
+Raises:
+    ValueError: If n is negative
+    
+Examples:
+    >>> factorial(5)
+    120
+    >>> factorial(0)
+    1
+
+• fft(signal: Sequence[Union[int, float, complex]]) -> List[complex]
+  Compute the Fast Fourier Transform of a signal.
+
+Args:
+    signal: Input signal (real or complex)
+    
+Returns:
+    FFT coefficients
+    
+Examples:
+    >>> fft([1, 0, 1, 0])
+    [(2+0j), (0+0j), (2+0j), (0+0j)]
+
+• fibonacci(n: int) -> int
+  Calculate the nth Fibonacci number.
+
+Args:
+    n: Position in Fibonacci sequence (0-indexed)
+    
+Returns:
+    nth Fibonacci number
+    
+Examples:
+    >>> fibonacci(0)
+    0
+    >>> fibonacci(10)
+    55
+
+• gcd(a: int, b: int) -> int
+  Calculate the greatest common divisor of two integers.
+
+Args:
+    a: First integer
+    b: Second integer
+    
+Returns:
+    Greatest common divisor of a and b
+    
+Examples:
+    >>> gcd(48, 18)
+    6
+    >>> gcd(17, 13)
+    1
+
+• hamming_distance(a: Sequence[Any], b: Sequence[Any]) -> int
+  Calculate Hamming distance between two sequences.
+
+Args:
+    a: First sequence
+    b: Second sequence
+    
+Returns:
+    Number of positions where elements differ
+    
+Examples:
+    >>> hamming_distance([1, 0, 1], [1, 1, 0])
+    2
+    >>> hamming_distance("hello", "hallo")
+    1
+
+• ifft(coefficients: Sequence[complex]) -> List[complex]
+  Compute the Inverse Fast Fourier Transform.
+
+Args:
+    coefficients: FFT coefficients
+    
+Returns:
+    Reconstructed signal
+    
+Examples:
+    >>> ifft([(2+0j), (0+0j), (2+0j), (0+0j)])
+    [(1+0j), (0+0j), (1+0j), (0+0j)]
+
+• is_prime(n: int) -> bool
+  Check if a number is prime.
+
+Args:
+    n: Integer to check
+    
+Returns:
+    True if n is prime, False otherwise
+    
+Examples:
+    >>> is_prime(7)
+    True
+    >>> is_prime(12)
+    False
+
+• lcm(a: int, b: int) -> int
+  Calculate the least common multiple of two integers.
+
+Args:
+    a: First integer
+    b: Second integer
+    
+Returns:
+    Least common multiple of a and b
+    
+Examples:
+    >>> lcm(12, 18)
+    36
+    >>> lcm(7, 5)
+    35
+
+• leaky_relu(x: Union[int, float, List[Union[int, float]]], alpha: float = 0.01) -> Union[float, List[float]]
+  Apply Leaky ReLU activation function.
+
+Formula: max(alpha * x, x)
+
+Args:
+    x: Input value(s)
+    alpha: Slope for negative values (default=0.01)
+    
+Returns:
+    Leaky ReLU output(s)
+    
+Examples:
+    >>> leaky_relu(-2)
+    -0.02
+    >>> leaky_relu([1, -1, 0, 3])
+    [1, -0.01, 0, 3]
+
+• lerp(a: Union[int, float], b: Union[int, float], t: float) -> float
+  Linear interpolation between two values.
+
+Args:
+    a: Start value
+    b: End value
+    t: Interpolation parameter (0.0 to 1.0)
+    
+Returns:
+    Interpolated value
+    
+Examples:
+    >>> lerp(0, 10, 0.5)
+    5.0
+    >>> lerp(10, 20, 0.2)
+    12.0
+
+• linear_regression(x: Sequence[Union[int, float]], y: Sequence[Union[int, float]]) -> Tuple[float, float]
+  Perform simple linear regression and return slope and intercept.
+
+Args:
+    x: Independent variable
+    y: Dependent variable
+    
+Returns:
+    Tuple of (slope, intercept)
+    
+Examples:
+    >>> linear_regression([1, 2, 3, 4], [2, 4, 6, 8])
+    (2.0, 0.0)
+
+• log(x: Union[int, float], base: Union[int, float] = 2.718281828459045) -> float
+  Calculate the logarithm of x to the given base.
+
+Args:
+    x: Input number (must be positive)
+    base: Base of logarithm (default is e for natural log)
+    
+Returns:
+    Logarithm of x to the given base
+    
+Raises:
+    ValueError: If x <= 0 or base <= 0 or base == 1
+    
+Examples:
+    >>> log(10, 10)
+    1.0
+    >>> log(math.e)
+    1.0
+
+• log10(x: Union[int, float]) -> float
+  Calculate the base-10 logarithm of x.
+
+Args:
+    x: Input number (must be positive)
+    
+Returns:
+    Base-10 logarithm of x
+    
+Examples:
+    >>> log10(100)
+    2.0
+    >>> log10(1000)
+    3.0
+
+• mae_loss(y_true: Sequence[Union[int, float]], y_pred: Sequence[Union[int, float]]) -> float
+  Calculate Mean Absolute Error loss.
+
+Args:
+    y_true: True values
+    y_pred: Predicted values
+    
+Returns:
+    MAE loss
+    
+Examples:
+    >>> mae_loss([1, 2, 3], [1.1, 2.1, 2.9])
+    0.1
+
+• manhattan_distance(a: Sequence[Union[int, float]], b: Sequence[Union[int, float]]) -> float
+  Calculate Manhattan (L1) distance between two vectors.
+
+Args:
+    a: First vector
+    b: Second vector
+    
+Returns:
+    Manhattan distance
+    
+Examples:
+    >>> manhattan_distance([0, 0], [3, 4])
+    7.0
+    >>> manhattan_distance([1, 2, 3], [4, 5, 6])
+    9.0
+
+• matrix_inverse(matrix: Sequence[Sequence[Union[int, float]]]) -> List[List[float]]
+  Calculate the inverse of a square matrix.
+
+Args:
+    matrix: Square matrix as a sequence of sequences
+    
+Returns:
+    Inverse matrix
+    
+Raises:
+    ValueError: If matrix is not square or is singular
+    
+Examples:
+    >>> matrix_inverse([[1, 2], [3, 4]])
+    [[-2.0, 1.0], [1.5, -0.5]]
+
+• matrix_multiply(a: Sequence[Sequence[Union[int, float]]], b: Sequence[Sequence[Union[int, float]]]) -> List[List[Union[int, float]]]
+  Multiply two matrices using standard matrix multiplication.
+
+The number of columns in matrix A must equal the number of rows in matrix B.
+
+Args:
+    a: First matrix (m × n)
+    b: Second matrix (n × p)
+    
+Returns:
+    Product matrix (m × p)
+    
+Raises:
+    ValueError: If matrices have incompatible dimensions
+    
+Examples:
+    >>> matrix_multiply([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+    [[19, 22], [43, 50]]
+    >>> matrix_multiply([[1, 2, 3]], [[1], [2], [3]])  # Row × Column
+    [[14]]
+
+• matrix_rank(matrix: Sequence[Sequence[Union[int, float]]]) -> int
+  Calculate the rank of a matrix.
+
+Args:
+    matrix: Input matrix as a sequence of sequences
+    
+Returns:
+    Rank of the matrix
+    
+Examples:
+    >>> matrix_rank([[1, 2], [3, 4]])
+    2
+    >>> matrix_rank([[1, 2], [2, 4]])
+    1
+
+• mean(data: Sequence[Union[int, float]]) -> float
+  Calculate the arithmetic mean (average) of a sequence of numbers.
+
+Args:
+    data: Sequence of numbers
+    
+Returns:
+    Arithmetic mean of the data
+    
+Raises:
+    ValueError: If data is empty
+    
+Examples:
+    >>> mean([1, 2, 3, 4, 5])
+    3.0
+    >>> mean([1.5, 2.5, 3.5])
+    2.5
+
+• median(data: Sequence[Union[int, float]]) -> float
+  Calculate the median (middle value) of a sequence of numbers.
+
+For even-length sequences, returns the average of the two middle values.
+
+Args:
+    data: Sequence of numbers
+    
+Returns:
+    Median value of the data
+    
+Raises:
+    ValueError: If data is empty
+    
+Examples:
+    >>> median([1, 3, 5, 7, 9])
+    5.0  # Middle value
+    >>> median([1, 2, 3, 4])
+    2.5  # Average of 2 and 3
+
+• min_max_scale(data: Sequence[Union[int, float]]) -> List[float]
+  Scale data to the range [0, 1] using min-max normalization.
+
+Formula: (x - min) / (max - min)
+
+Args:
+    data: Sequence of numbers
+    
+Returns:
+    List of scaled values in range [0, 1]
+    
+Examples:
+    >>> min_max_scale([1, 2, 3, 4, 5])
+    [0.0, 0.25, 0.5, 0.75, 1.0]
+    >>> min_max_scale([10, 10, 10])  # All same values
+    [0.0, 0.0, 0.0]
+
+• mse_loss(y_true: Sequence[Union[int, float]], y_pred: Sequence[Union[int, float]]) -> float
+  Calculate Mean Squared Error loss.
+
+Args:
+    y_true: True values
+    y_pred: Predicted values
+    
+Returns:
+    MSE loss
+    
+Raises:
+    ValueError: If sequences have different lengths
+    
+Examples:
+    >>> mse_loss([1, 2, 3], [1.1, 2.1, 2.9])
+    0.01
+
+• multiplication(a: Union[int, float, List[Union[int, float]], str], b: Union[int, float, List[Union[int, float]], str]) -> Union[int, float, List[Union[int, float]]]
+  Perform multiplication between two values with support for scalars, lists, and numeric strings.
+
+Args:
+    a: First operand (multiplicand)
+    b: Second operand (multiplier)
+
+Returns:
+    Result of multiplication operation
+    
+Examples:
+    >>> multiplication(5, 10)
+    50
+    >>> multiplication("1,2,3", "4,5,6")
+    [4.0, 10.0, 18.0]
+    >>> multiplication([1, 2, 3], 5)
+    [5, 10, 15]
+    >>> multiplication(5, [10, 20])
+    [50, 100]
+    >>> multiplication([1, 2], [3, 4, 5])
+    [3, 8, 0]
+
+• normal_cdf(x: Union[int, float], mu: float = 0.0, sigma: float = 1.0) -> float
+  Calculate the cumulative distribution function of a normal distribution.
+
+Args:
+    x: Input value
+    mu: Mean (default=0.0)
+    sigma: Standard deviation (default=1.0)
+    
+Returns:
+    CDF value at x
+    
+Examples:
+    >>> normal_cdf(0)
+    0.5
+    >>> normal_cdf(1)
+    0.8413447460685429
+
+• normal_pdf(x: Union[int, float], mu: float = 0.0, sigma: float = 1.0) -> float
+  Calculate the probability density function of a normal distribution.
+
+Args:
+    x: Input value
+    mu: Mean (default=0.0)
+    sigma: Standard deviation (default=1.0)
+    
+Returns:
+    PDF value at x
+    
+Examples:
+    >>> normal_pdf(0)
+    0.3989422804014327
+    >>> normal_pdf(1, mu=0, sigma=1)
+    0.24197072451914337
+
+• normalize_vector(v: Sequence[Union[int, float]], norm: str = 'l2') -> List[float]
+  Normalize a vector using L1 (Manhattan) or L2 (Euclidean) norm.
+
+Args:
+    v: Input vector
+    norm: Normalization type ('l1' for Manhattan, 'l2' for Euclidean)
+    
+Returns:
+    Normalized vector (unit vector in the specified norm)
+    
+Raises:
+    ValueError: If norm is not 'l1' or 'l2'
+    
+Examples:
+    >>> normalize_vector([3, 4], norm="l2")
+    [0.6, 0.8]  # L2 norm: sqrt(3²+4²) = 5, so [3/5, 4/5]
+    >>> normalize_vector([3, 4], norm="l1")
+    [0.428..., 0.571...]  # L1 norm: |3|+|4| = 7, so [3/7, 4/7]
+
+• poisson_pmf(k: int, lam: float) -> float
+  Calculate the probability mass function of a Poisson distribution.
+
+Args:
+    k: Number of events
+    lam: Average rate (lambda parameter)
+    
+Returns:
+    PMF value
+    
+Examples:
+    >>> poisson_pmf(2, 3.0)
+    0.22404180765538775
+
+• power(base: Union[int, float], exponent: Union[int, float]) -> float
+  Calculate base raised to the power of exponent.
+
+Args:
+    base: Base number
+    exponent: Exponent number
+    
+Returns:
+    Result of base^exponent
+    
+Examples:
+    >>> power(2, 3)
+    8.0
+    >>> power(9, 0.5)
+    3.0
+
+• prime_factors(n: int) -> List[int]
+  Find all prime factors of a number.
+
+Args:
+    n: Integer to factorize
+    
+Returns:
+    List of prime factors
+    
+Examples:
+    >>> prime_factors(12)
+    [2, 2, 3]
+    >>> prime_factors(17)
+    [17]
+
+• radians(x: Union[int, float]) -> float
+  Convert angle from degrees to radians.
+
+Args:
+    x: Angle in degrees
+    
+Returns:
+    Angle in radians
+    
+Examples:
+    >>> radians(180)
+    3.141592653589793
+    >>> radians(90)
+    1.5707963267948966
+
+• random_choice(probabilities: List[float]) -> int
+  Select an index based on a probability distribution using weighted random selection.
+
+Args:
+    probabilities: List of probabilities that should sum to approximately 1.0
+    
+Returns:
+    The chosen index (0-based)
+    
+Raises:
+    ValueError: If probabilities list is empty
+    
+Examples:
+    >>> set_seed(42)
+    >>> random_choice([0.1, 0.7, 0.2])
+    1  # Most likely to return 1 due to 0.7 probability
+    >>> random_choice([0.5, 0.5])  # Equal probability
+    0
+
+• relu(x: Union[int, float, List[Union[int, float]]]) -> Union[float, List[float]]
+  Apply ReLU (Rectified Linear Unit) activation function.
+
+Formula: max(0, x)
+
+Args:
+    x: Input value(s)
+    
+Returns:
+    ReLU output(s)
+    
+Examples:
+    >>> relu(-2)
+    0
+    >>> relu([1, -1, 0, 3])
+    [1, 0, 0, 3]
+
+• sample_normal(mean: float = 0.0, std: float = 1.0, size: int = 1) -> List[float]
+  Generate random samples from a normal (Gaussian) distribution.
+
+Uses Box-Muller transformation for generating normally distributed values.
+
+Args:
+    mean: Mean of the distribution (default=0.0)
+    std: Standard deviation of the distribution (default=1.0, must be > 0)
+    size: Number of samples to generate (default=1)
+    
+Returns:
+    List of normally distributed random values
+    
+Raises:
+    ValueError: If std <= 0 or size < 1
+    
+Examples:
+    >>> set_seed(42)
+    >>> sample_normal(mean=5, std=2, size=3)
+    [4.2, 6.1, 3.8]  # Values around mean=5 with std=2
+    >>> sample_normal()  # Standard normal (mean=0, std=1)
+    [0.49]
+
+• sample_uniform(low: float = 0.0, high: float = 1.0, size: int = 1) -> List[float]
+  Generate random samples from a uniform distribution.
+
+Args:
+    low: Lower bound (inclusive, default=0.0)
+    high: Upper bound (exclusive, default=1.0)
+    size: Number of samples to generate (default=1)
+    
+Returns:
+    List of uniformly distributed random values
+    
+Raises:
+    ValueError: If low >= high or size < 1
+    
+Examples:
+    >>> set_seed(42)
+    >>> sample_uniform(0, 10, 3)
+    [6.39, 9.50, 7.31]  # Values between 0 and 10
+    >>> sample_uniform(-1, 1, 2)
+    [-0.25, 0.46]  # Values between -1 and 1
+
+• set_seed(seed: int) -> None
+  Set the seed for all random number generators to ensure reproducibility.
+
+This function sets seeds for both Python's built-in random module and NumPy's
+random number generator, ensuring consistent results across runs.
+
+Args:
+    seed: The seed value to use for random number generation (integer)
+    
+Examples:
+    >>> set_seed(42)
+    >>> random.random()  # Will always return the same value for this seed
+    0.6394267984578837
+    >>> np.random.rand(3)  # Will always produce the same array for this seed
+    array([0.37454012, 0.95071431, 0.73199394])
+
+• shuffle_list(data: List[Any]) -> List[Any]
+  Shuffle a list and return a new shuffled list (does not modify the original).
+
+Uses Fisher-Yates shuffle algorithm for uniform randomness.
+
+Args:
+    data: Input list to shuffle
+    
+Returns:
+    New shuffled copy of the list
+    
+Examples:
+    >>> original = [1, 2, 3, 4, 5]
+    >>> shuffled = shuffle_list(original)
+    >>> original  # Original list unchanged
+    [1, 2, 3, 4, 5]
+    >>> len(shuffled) == len(original)
+    True
+
+• sigmoid(x: Union[int, float, List[Union[int, float]]]) -> Union[float, List[float]]
+  Apply sigmoid activation function.
+
+Formula: 1 / (1 + e^(-x))
+
+Args:
+    x: Input value(s)
+    
+Returns:
+    Sigmoid output(s) in range (0, 1)
+    
+Examples:
+    >>> sigmoid(0)
+    0.5
+    >>> sigmoid([0, 1, -1])
+    [0.5, 0.7310585786300049, 0.2689414213699951]
+
+• sin(x: Union[int, float]) -> float
+  Calculate the sine of x (in radians).
+
+Args:
+    x: Angle in radians
+    
+Returns:
+    Sine of x
+    
+Examples:
+    >>> sin(0)
+    0.0
+    >>> sin(math.pi / 2)
+    1.0
+
+• softmax(x: Sequence[Union[int, float]]) -> List[float]
+  Apply softmax activation function to a vector.
+
+Args:
+    x: Input vector
+    
+Returns:
+    Softmax probabilities (sum to 1)
+    
+Examples:
+    >>> softmax([1, 2, 3])
+    [0.09003057317038046, 0.24472847105479767, 0.6652409557748219]
+
+• sqrt(x: Union[int, float]) -> float
+  Calculate the square root of a number.
+
+Args:
+    x: Input number (must be non-negative)
+    
+Returns:
+    Square root of x
+    
+Raises:
+    ValueError: If x is negative
+    
+Examples:
+    >>> sqrt(16)
+    4.0
+    >>> sqrt(2)
+    1.4142135623730951
+
+• std_dev(data: Sequence[Union[int, float]], ddof: int = 0) -> float
+  Calculate the standard deviation of a sequence of numbers.
+
+Standard deviation is the square root of variance.
+
+Args:
+    data: Sequence of numbers
+    ddof: Delta degrees of freedom (0 for population std, 1 for sample std)
+    
+Returns:
+    Standard deviation of the data
+    
+Examples:
+    >>> std_dev([1, 2, 3, 4, 5])
+    1.4142135623730951
+    >>> std_dev([1, 2, 3, 4, 5], ddof=1)
+    1.5811388300841898
+
+• subtraction(a: Union[int, float, List[Union[int, float]], str], b: Union[int, float, List[Union[int, float]], str]) -> Union[int, float, List[Union[int, float]]]
+  Perform subtraction between two values with support for scalars, lists, and numeric strings.
+
+Args:
+    a: First operand (minuend)
+    b: Second operand (subtrahend)
+
+Returns:
+    Result of subtraction operation (a - b)
+    
+Examples:
+    >>> subtraction(10, 4)
+    6
+    >>> subtraction("10,20,30", "1,2,3")
+    [9.0, 18.0, 27.0]
+    >>> subtraction([5, 10], 3)
+    [2, 7]
+    >>> subtraction(3, [1, 2, 3])
+    [2, 1, 0]
+    >>> subtraction([5, 6], [2, 3, 4])
+    [3, 3, -4]
+
+• svd(matrix: Sequence[Sequence[Union[int, float]]]) -> Tuple[List[List[float]], List[float], List[List[float]]]
+  Perform Singular Value Decomposition (SVD) on a matrix.
+
+Args:
+    matrix: Input matrix as a sequence of sequences
+    
+Returns:
+    Tuple of (U, S, V_transpose) where A = U @ S @ V_transpose
+    
+Examples:
+    >>> U, S, Vt = svd([[1, 2], [3, 4], [5, 6]])
+    >>> len(U), len(S), len(Vt)
+    (3, 2, 2)
+
+• tan(x: Union[int, float]) -> float
+  Calculate the tangent of x (in radians).
+
+Args:
+    x: Angle in radians
+    
+Returns:
+    Tangent of x
+    
+Examples:
+    >>> tan(0)
+    0.0
+    >>> tan(math.pi / 4)
+    1.0
+
+• tanh_activation(x: Union[int, float, List[Union[int, float]]]) -> Union[float, List[float]]
+  Apply hyperbolic tangent activation function.
+
+Args:
+    x: Input value(s)
+    
+Returns:
+    Tanh output(s) in range (-1, 1)
+    
+Examples:
+    >>> tanh_activation(0)
+    0.0
+    >>> tanh_activation([0, 1, -1])
+    [0.0, 0.7615941559557649, -0.7615941559557649]
+
+• train_test_split(data: List[Any], ratio: float = 0.8) -> Tuple[List[Any], List[Any]]
+  Split dataset into training and testing sets with random shuffling.
+
+Args:
+    data: Dataset to split
+    ratio: Proportion of data for training (default=0.8, must be between 0 and 1)
+    
+Returns:
+    Tuple of (train_set, test_set)
+    
+Raises:
+    ValueError: If ratio is not between 0 and 1
+    
+Examples:
+    >>> data = list(range(10))  # [0, 1, 2, ..., 9]
+    >>> train, test = train_test_split(data, ratio=0.7)
+    >>> len(train), len(test)
+    (7, 3)
+    >>> set(train + test) == set(data)  # All data preserved
+    True
+
+• transpose(matrix: Sequence[Sequence[Union[int, float]]]) -> List[List[Union[int, float]]]
+  Calculate the transpose of a matrix (flip rows and columns).
+
+Args:
+    matrix: 2D matrix as a sequence of sequences
+    
+Returns:
+    Transposed matrix
+    
+Examples:
+    >>> transpose([[1, 2], [3, 4], [5, 6]])
+    [[1, 3, 5], [2, 4, 6]]
+    >>> transpose([[1, 2, 3]])  # Row vector to column vector
+    [[1], [2], [3]]
+
+• variance(data: Sequence[Union[int, float]], ddof: int = 0) -> float
+  Calculate the variance of a sequence of numbers.
+
+Variance measures how spread out the data points are from the mean.
+
+Args:
+    data: Sequence of numbers
+    ddof: Delta degrees of freedom (0 for population variance, 1 for sample variance)
+    
+Returns:
+    Variance of the data
+    
+Raises:
+    ValueError: If data has fewer than 2 elements when ddof=1
+    
+Examples:
+    >>> variance([1, 2, 3, 4, 5])
+    2.0  # Population variance
+    >>> variance([1, 2, 3, 4, 5], ddof=1)
+    2.5  # Sample variance (Bessel's correction)
+
+• vector_magnitude(v: Sequence[Union[int, float]]) -> float
+  Calculate the magnitude (length) of a vector.
+
+Args:
+    v: Input vector
+    
+Returns:
+    Magnitude of the vector
+    
+Examples:
+    >>> vector_magnitude([3, 4])
+    5.0
+    >>> vector_magnitude([1, 1, 1])
+    1.7320508075688772
+
+• z_score(data: Sequence[Union[int, float]]) -> List[float]
+  Calculate z-scores (standardized values) for a sequence of numbers.
+
+Z-score indicates how many standard deviations a value is from the mean.
+Formula: (x - mean) / std_dev
+
+Args:
+    data: Sequence of numbers
+    
+Returns:
+    List of z-scores
+    
+Examples:
+    >>> z_score([1, 2, 3, 4, 5])
+    [-1.414..., -0.707..., 0.0, 0.707..., 1.414...]
+    >>> z_score([5, 5, 5])  # All same values
+    [0.0, 0.0, 0.0]
+
+------------------------------------------------------------
+
+CODE MODULE
+===========
+
+DESCRIPTION:
+------------
+LinkAI-Aion Code Analysis Module
+===============================
+
+Advanced code analysis and understanding utilities for AI/ML projects.
+
+FUNCTIONS:
+----------
+
+• analyze_complexity(code: str) -> Dict[str, Any]
+  Analyze code complexity metrics.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    Dictionary with complexity metrics
+
+• count_operators(code: str) -> Dict[str, int]
+  Count different types of operators in code.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    Dictionary with operator counts
+
+• explain_code(code: str) -> str
+  Provide a detailed explanation of code structure and patterns.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    Detailed explanation of the code
+
+• extract_classes(code: str) -> List[str]
+  Extract class names from code.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    List of class names
+
+• extract_docstrings(code: str) -> List[str]
+  Extract docstrings from Python code.
+
+Args:
+    code: Python source code
+    
+Returns:
+    List of docstrings found in the code
+
+• extract_functions(code: str) -> List[str]
+  Extract function names from code.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    List of function names
+
+• extract_imports(code: str) -> List[str]
+  Extract import statements from code.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    List of imported modules
+
+• find_code_smells(code: str) -> List[str]
+  Identify potential code smells and issues.
+
+Args:
+    code: Source code to analyze
+    
+Returns:
+    List of identified code smells
+
+• strip_comments(code: str) -> str
+  Remove comments from code.
+
+Args:
+    code: Source code with comments
+    
+Returns:
+    Code without comments
+
+------------------------------------------------------------
+
+SNIPPETS MODULE
+===============
+
+DESCRIPTION:
+------------
+LinkAI-Aion Code Snippets Module
+=================================
+
+Advanced code snippet extraction and analysis utilities for AI projects.
+Provides comprehensive code parsing, comment extraction, and function analysis.
+
+Features:
+- Code comment extraction and analysis
+- Function definition parsing and extraction
+- Class definition parsing and extraction
+- Code structure analysis and documentation
+- Snippet organization and categorization
+- Code element identification and extraction
+
+Author: Aksel (CEO, LinkAI)
+License: Apache-2.0
+Copyright: 2025 LinkAI
+
+This module is part of the LinkAI-Aion utility library.
+
+FUNCTIONS:
+----------
+
+• extract_class_defs(code)
+  Extract class definitions from the given code using regex pattern matching.
+
+This function searches for Python class definitions (class statements)
+and returns a list of class names.
+
+Args:
+    code (str): The source code to extract classes from
+    
+Returns:
+    List[str]: A list of class names found in the code
+
+• extract_comments(code)
+  Extract all comments from the given code using regex pattern matching.
+
+This function searches for Python-style comments (lines starting with #)
+and returns a list of all found comments.
+
+Args:
+    code (str): The source code to extract comments from
+    
+Returns:
+    List[str]: A list of all found comments
+
+• extract_functions(code)
+  Extract function definitions from the given code using regex pattern matching.
+
+This function searches for Python function definitions (def statements)
+and returns a list of function names.
+
+Args:
+    code (str): The source code to extract functions from
+    
+Returns:
+    List[str]: A list of function names found in the code
+
+------------------------------------------------------------
+
+PROMPT MODULE
+=============
+
+DESCRIPTION:
+------------
+LinkAI-Aion Prompt Management Module
+====================================
+
+Advanced prompt management and display utilities for AI projects.
+Provides comprehensive prompt handling, formatting, and presentation features.
+
+Features:
+- System prompt management and display
+- User prompt handling and formatting
+- Prompt type classification and routing
+- Prompt template management
+- Interactive prompt interfaces
+- Prompt validation and sanitization
+
+Author: Aksel (CEO, LinkAI)
+License: Apache-2.0
+Copyright: 2025 LinkAI
+
+This module is part of the LinkAI-Aion utility library.
+
+FUNCTIONS:
+----------
+
+• build_conversation_prompt(messages: List[Dict[str, str]], system_prompt: str = None) -> str
+  Build a conversation-style prompt from a list of messages.
+
+Args:
+    messages: List of message dictionaries with 'role' and 'content' keys
+    system_prompt: Optional system prompt to prepend
+    
+Returns:
+    Formatted conversation prompt
+    
+Examples:
+    >>> messages = [
+    ...     {"role": "user", "content": "Hello"},
+    ...     {"role": "assistant", "content": "Hi there!"},
+    ...     {"role": "user", "content": "How are you?"}
+    ... ]
+    >>> prompt = build_conversation_prompt(messages)
+
+• create_custom_prompt(template: str, **kwargs) -> str
+  Create a custom prompt from a template with variable substitution.
+
+Args:
+    template: Prompt template string with {variable} placeholders
+    **kwargs: Variables to substitute in the template
+    
+Returns:
+    Formatted prompt string
+    
+Examples:
+    >>> template = "Analyze {language} code for {purpose}"
+    >>> prompt = create_custom_prompt(template, language="Python", purpose="bugs")
+    >>> print(prompt)
+    Analyze Python code for bugs
+
+• extract_code_from_prompt(prompt: str) -> List[str]
+  Extract code blocks from a prompt text.
+
+Args:
+    prompt: Prompt text that may contain code blocks
+    
+Returns:
+    List of extracted code strings
+
+• get_prompt_templates() -> Dict[str, str]
+  Get a collection of pre-defined prompt templates.
+
+Returns:
+    Dictionary of prompt templates
+
+• optimize_prompt_for_ai(prompt: str) -> str
+  Optimize a prompt for better AI model performance.
+
+Args:
+    prompt: Original prompt text
+    
+Returns:
+    Optimized prompt text
+
+• show_prompt(prompt_type: str) -> str
+  Display and return a formatted prompt based on the specified prompt type.
+
+Args:
+    prompt_type: The type of prompt to display
+    
+Returns:
+    The formatted prompt string
+
+• validate_prompt_length(prompt: str, max_tokens: int = 4000) -> Tuple[bool, int]
+  Validate if a prompt is within token limits.
+
+Args:
+    prompt: Prompt text to validate
+    max_tokens: Maximum allowed tokens (approximate)
+    
+Returns:
+    Tuple of (is_valid, estimated_tokens)
+
+------------------------------------------------------------
+
+EMBED MODULE
+============
+
+DESCRIPTION:
+------------
+LinkAI-Aion Embedding Utilities Module
+======================================
+
+Advanced embedding generation and vector operations for AI projects.
+
+FUNCTIONS:
+----------
+
+• cosine_similarity(vec1: numpy.ndarray, vec2: numpy.ndarray) -> float
+  Calculate cosine similarity between two vectors.
+
+Args:
+    vec1: First vector
+    vec2: Second vector
+    
+Returns:
+    Cosine similarity score (-1 to 1)
+
+• embed_file(filepath: str, model_name: str = 'all-MiniLM-L6-v2') -> Optional[numpy.ndarray]
+  Generate embeddings for a file's contents.
+
+Args:
+    filepath: Path to the file to embed
+    model_name: Name of the embedding model to use
+    
+Returns:
+    Embedding vector for the file contents, or None if file cannot be read
+
+• embed_text(text: str, model_name: str = 'all-MiniLM-L6-v2') -> numpy.ndarray
+  Generate embeddings for text.
+
+Args:
+    text: Text to embed
+    model_name: Name of the embedding model to use
+    
+Returns:
+    Embedding vector
+
+------------------------------------------------------------
+
+EVALUATE MODULE
+===============
+
+DESCRIPTION:
+------------
+LinkAI-Aion Evaluation Metrics Module
+====================================
+
+Advanced evaluation metrics and model assessment utilities for AI/ML projects.
+
+FUNCTIONS:
+----------
+
+• calculate_auc_roc(y_scores: List[float], y_true: List[int]) -> float
+  Calculate AUC-ROC for binary classification.
+
+Args:
+    y_scores: Prediction scores/probabilities
+    y_true: True binary labels (0 or 1)
+    
+Returns:
+    AUC-ROC score
+
+• calculate_classification_metrics(y_pred: List[Any], y_true: List[Any]) -> Dict[str, float]
+  Calculate classification metrics.
+
+Args:
+    y_pred: Predicted labels
+    y_true: True labels
+    
+Returns:
+    Dictionary with accuracy, precision, recall, f1_score
+
+• calculate_regression_metrics(y_pred: List[float], y_true: List[float]) -> Dict[str, float]
+  Calculate regression metrics.
+
+Args:
+    y_pred: Predicted values
+    y_true: True values
+    
+Returns:
+    Dictionary with MSE, RMSE, MAE, R²
+
+• confusion_matrix(y_pred: List[Any], y_true: List[Any]) -> numpy.ndarray
+  Calculate confusion matrix.
+
+Args:
+    y_pred: Predicted labels
+    y_true: True labels
+    
+Returns:
+    Confusion matrix as numpy array
+
+• evaluate_predictions(preds_file: str, answers_file: str) -> Dict[str, float]
+  Evaluate predictions against ground truth answers.
+
+Args:
+    preds_file: Path to predictions file (JSON or CSV)
+    answers_file: Path to answers file (JSON or CSV)
+    
+Returns:
+    Dictionary of evaluation metrics
+
+• evaluate_text_similarity(pred_texts: List[str], true_texts: List[str]) -> Dict[str, float]
+  Evaluate text similarity using various metrics.
+
+Args:
+    pred_texts: Predicted text strings
+    true_texts: True text strings
+    
+Returns:
+    Dictionary with similarity metrics
+
+------------------------------------------------------------
+
+GIT MODULE
+==========
+
+DESCRIPTION:
+------------
+LinkAI-Aion Git Integration Module
+==================================
+
+Provides Git repository management and analysis capabilities.
+Integrates with existing file management and CLI systems.
+
+Features:
+- Repository status and information
+- Commit history and analysis
+- Branch management
+- Diff viewing and comparison
+- Git operations through CLI interface
+
+FUNCTIONS:
+----------
+
+• get_git_status(repo_path: str = None) -> Dict[str, <built-in function any>]
+  Get Git status for a repository.
+
+• get_recent_commits(repo_path: str = None, max_commits: int = 10) -> List[Dict[str, <built-in function any>]]
+  Get recent commit history for a repository.
+
+• list_branches(repo_path: str = None) -> List[Dict[str, <built-in function any>]]
+  List all branches in a repository.
+
+------------------------------------------------------------
+
+WATCHER MODULE
+==============
+
+DESCRIPTION:
+------------
+Documentation for watcher module
+
+FUNCTIONS:
+----------
+
+• create_file_monitor(filepath: str, callback: Callable[[str, Dict], NoneType]) -> Dict[str, Any]
+  Create a comprehensive file monitor with metadata.
+
+• get_file_change_history(filepath: str, max_entries: int = 10) -> list
+  Get recent change history for a file (simulated).
+
+• get_watched_files() -> list
+  Get list of currently watched files.
+
+• stop_all_watchers()
+  Stop all file watchers.
+
+• unwatch_file(filepath: str) -> bool
+  Stop watching a specific file.
+
+• watch_code_file(filepath: str, on_change: Callable[[str, Dict], NoneType]) -> aion.watcher.CodeWatcher
+  Watch a code file with automatic language detection and analysis.
+
+• watch_directory(directory: str, callback: Callable[[str, str], NoneType], file_pattern: str = '*') -> aion.watcher.DirectoryWatcher
+  Watch a directory for file changes.
+
+• watch_file_for_changes(filepath: str, callback: Callable[[str], NoneType], interval: float = 1.0) -> bool
+  Watch a file for changes and call callback when modified.
+
+------------------------------------------------------------
+

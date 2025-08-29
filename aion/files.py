@@ -14,7 +14,7 @@ Features:
 - Directory management and navigation
 - File metadata extraction and analysis
 
-Author: Aksel (CEO, LinkAI)
+Author: Aksel Aghajanyan
 License: Apache-2.0
 Copyright: 2025 LinkAI
 
