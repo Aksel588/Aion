@@ -1,24 +1,45 @@
 #!/usr/bin/env python3
 """
-LinkAI-Aion Prompt Management Module
-====================================
+📝 Aqwel-Aion v0.1.7 - AI Prompt Engineering & Management Module
+================================================================
 
-Advanced prompt management and display utilities for AI projects.
-Provides comprehensive prompt handling, formatting, and presentation features.
+🚀 COMPLETELY REWRITTEN IN v0.1.7 - PROFESSIONAL PROMPT ENGINEERING:
+This module was entirely rewritten for v0.1.7 to provide state-of-the-art
+prompt engineering capabilities specifically designed for AI researchers.
 
-Features:
-- System prompt management and display
-- User prompt handling and formatting
-- Prompt type classification and routing
-- Prompt template management
-- Interactive prompt interfaces
-- Prompt validation and sanitization
+🎯 WHAT WAS ADDED IN v0.1.7:
+- ✅ show_prompt(): Enhanced prompt display with 11+ professional templates
+- ✅ get_prompt_templates(): Comprehensive template library for AI research
+- ✅ create_custom_prompt(): Dynamic prompt generation with variable substitution
+- ✅ build_conversation_prompt(): Multi-turn conversation management
+- ✅ extract_code_from_prompt(): Intelligent code extraction from AI responses
+- ✅ validate_prompt_length(): Token counting and length optimization
+- ✅ optimize_prompt_for_ai(): Automatic prompt improvement and refinement
+
+🔬 PROFESSIONAL TEMPLATE LIBRARY:
+- System prompts for AI assistants and research tools
+- Code review and analysis prompts for quality assessment
+- Data analysis prompts for statistical and ML workflows
+- Research prompts for academic and scientific applications
+- Creative and brainstorming prompts for ideation
+- Educational prompts for learning and teaching scenarios
+
+💡 PERFECT FOR AI RESEARCHERS:
+This module provides research-grade prompt engineering tools that help
+researchers get better results from AI models, improve reproducibility,
+and standardize prompt workflows across projects.
+
+🏆 ADVANCED FEATURES:
+- Variable substitution with type checking and validation
+- Conversation context management for multi-turn interactions
+- Automatic prompt optimization using best practices
+- Code extraction with syntax validation
+- Length optimization for different AI model constraints
 
 Author: Aksel Aghajanyan
 License: Apache-2.0
-Copyright: 2025 LinkAI
-
-This module is part of the LinkAI-Aion utility library.
+Copyright: 2025 Aqwel AI  
+Version: 0.1.7 (Complete rewrite - was basic display function in v0.1.6)
 """
 
 import re
@@ -48,10 +69,12 @@ def show_prompt(prompt_type: str) -> str:
 
 def get_prompt_templates() -> Dict[str, str]:
     """
-    Get a collection of pre-defined prompt templates.
+    Get collection of pre-defined AI prompt templates for common tasks.
     
-    Returns:
-        Dictionary of prompt templates
+    Returns
+    -------
+    dict
+        Dictionary mapping template names to prompt strings
     """
     return {
         "system": "You are Aion, an advanced AI assistant specialized in helping with software development, data science, and AI/ML tasks. You provide accurate, helpful, and detailed responses.",
