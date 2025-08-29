@@ -14,7 +14,7 @@ Features:
 - Snippet organization and categorization
 - Code element identification and extraction
 
-Author: Aksel (CEO, LinkAI)
+Author: Aksel Aghajanyan
 License: Apache-2.0
 Copyright: 2025 LinkAI
 

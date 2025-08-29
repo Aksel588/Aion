@@ -6,7 +6,7 @@ LinkAI-Aion v0.1.6 - Enhanced AI Utilities Library
 Main entry point for the LinkAI-Aion utility library.
 Provides command-line interface and core functionality access.
 
-Author: Aksel (CEO, LinkAI)
+Author: Aksel Aghajanyan
 License: Apache-2.0
 Copyright: 2025 LinkAI
 """
