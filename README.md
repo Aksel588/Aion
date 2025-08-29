@@ -1,4 +1,4 @@
-# aqwel-aion
+# Aqwel Aion
 
 **🚀 Aqwel-Aion v0.1.7 — Complete AI Research & Development Library with Advanced Mathematics and ML Tools**
 
@@ -104,13 +104,13 @@ aion.watcher.watch_file_for_changes("data.csv", on_change_callback)
 ## 🌐 Website & Resources
 
 **Official Website:**  
-🔗 https://aqwelai.com/#aqwel-aion
+🔗 [https://aqwelai.com/#aqwel-aion](https://linkaiapps.com)
 
 **Complete Documentation:**  
 📚 Generated automatically with `aion.pdf.generate_complete_documentation()`
 
 **PyPI Package:**  
-📦 https://pypi.org/project/aqwel-aion/
+📦 [https://pypi.org/project/aqwel-aion/](https://pypi.org/project/aqwel-aion/)
 
 ---
 
